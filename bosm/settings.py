@@ -25,7 +25,7 @@ SECRET_KEY = 'sxqps21_7z12+l()o%c$pmi@gunu@3pqivn-7c7o7sv5#rhe^m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sportzilla.pythonanywhere.com', '127.0.0.1', 'localhost',]
+ALLOWED_HOSTS = ['abhishekspeer.pythonanywhere.com', '127.0.0.1', 'localhost',]
 
 
 # Application definition
@@ -33,10 +33,6 @@ ALLOWED_HOSTS = ['sportzilla.pythonanywhere.com', '127.0.0.1', 'localhost',]
 INSTALLED_APPS = [
     'sportzilla.apps.SportzillaConfig',
     'django.contrib.sites',
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -147,6 +143,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'main'
+LOGOUT_REDIRECT_URL = 'main'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='1060438488864-oqbnppt4fbd4ml7fu6d6l6u51m14k60f.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'qFZH7K_i_8C2xaqsLwsDXi_1'
