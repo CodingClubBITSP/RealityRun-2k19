@@ -27,21 +27,25 @@ var userName = document.getElementById('username');
         {
 //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
               // console.log(percent);
-            for(i=0;i<3;i++)
-            {
-                if (percent>left[i]&&percent<right[i])
-                {
-                    if (av[i]==1)
-                            document.getElementById("Available"+String(i+1)).style.display='block';
-                        else
-                        document.getElementById("NotAvailable"+String(i+1)).style.display='block';
-
-                        }
-            else
-            {
-                document.getElementById("Available"+String(i+1)).style.display='none';
-                document.getElementById("NotAvailable"+String(i+1)).style.display='none';
-                }
+            // for(i=0;i<3;i++)
+            // {
+            //     if (percent>left[i]&&percent<right[i])
+            //     {
+            //         if (av[i]==1)
+            //                 document.getElementById("Available"+String(i+1)).style.display='block';
+            //             else
+            //             document.getElementById("NotAvailable"+String(i+1)).style.display='block';
+            //
+            //             }
+            // else
+            // {
+            //     document.getElementById("Available"+String(i+1)).style.display='none';
+            //     document.getElementById("NotAvailable"+String(i+1)).style.display='none';
+            //     }
+            // }
+            for(i=0;i<3;i++) {
+                document.getElementById("Available"+String(i+1)).style.display='block';
+                document.getElementById("NotAvailable"+String(i+1)).style.display='block';
             }
             var wide = Math.floor(percent * 100);
             var progress = wide + '%';
