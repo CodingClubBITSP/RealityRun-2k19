@@ -72,3 +72,8 @@ canvas{ display: block; vertical-align: bottom; opacity: 1}
         opacity: 1;
     }
 }
+
+.rotate
+{
+    display: none;
+}

@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<title>Reality Run | 2k19</title>
 	<!-- <link rel="icon" href="../static/media/img/LOGO_CC.png" type="image/gif/png"> -->
-	<link rel="icon" href="{% static 'media/img/LOGO_CC.png' %}" type="image/gif" sizes="16x16" style="display: block">
+	<link rel="icon" href="{% static 'media/img/LOGO_CC1.png' %}" type="image/gif" sizes="16x16" style="display: block;transform:scale(1.5)">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
     <script type="text/javascript" src="{% static 'js/wow.min.js' %}"</script>
@@ -15,9 +15,10 @@
     </script>
     <script src="{% static 'js/pleaserotate.min.js' %}"></script>
     <script type="text/javascript">
-        $(window).on("load", function() {
-            $('body').addClass('loaded');
-        });
+        // $(window).on("load", function() {
+        //     $('body').addClass('loaded');
+        // });
+		window.onload = function(){ document.getElementById("loading").style.display = "none" }
     </script>
 <script>
   var portrait = window.innerWidth < window.innerHeight;
@@ -28,22 +29,63 @@
 
 </script>
 <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+
+	<style>
+		@media screen and (max-width: 1000px) and (max-height: 560px) {
+
+			.scroll {
+				width: 5000px;
+			}
+
+			#road {
+				height: 90vh;
+				width: 12200px;
+			}
+
+			#backImg {
+				height: 110vh;
+				width: 7000px;
+				transform: translateY(-0vh);
+			}
+
+			#eve {
+				height: 325px;
+				bottom: -18vh;
+			}
+		}
+
+		#loading
+		{
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid blue;
+			border-right: 16px solid green;
+			border-bottom: 16px solid red;
+			border-left: 16px solid pink;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+			0% { -webkit-transform: rotate(0deg); }
+			100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+	</style>
+
 </head>
 <body>
 <!-- Loader -->
-    <!-- <div id="loader-wrapper">
-        <div id="loader">
-            <div class='loader--dot'></div>
-            <div class='loader--dot'></div>
-            <div class='loader--dot'></div>
-            <div class='loader--dot'></div>
-            <div class='loader--dot'></div>
-            <div class='loader--dot'></div>
-            <div class='loader--text'></div>
-        </div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div> -->
+	<div id="loading">
+		<img id="loading-image" src="{% static 'images/FullBackg.png' %}" alt="Loading..." />
+	</div>
 <!-- Top navigation bar -->
     <div id="top-nav">
 			<span onclick="openInstructions()"><img src="{% static 'images/instruct.svg' %}" height="25vh">Instructions</span>
