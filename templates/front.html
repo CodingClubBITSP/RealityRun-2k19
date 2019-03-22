@@ -8,12 +8,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="{% static 'main/style/newCss.css' %}">
 		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+
 	</head>
 	<body>
 
 		<!-- <img src="../static/media/img/stadstad6.svg" class="stad"> -->
 		<!-- <img src="../static/media/img/stadstad7.svg" class="stadad"> -->
-		<!-- <img src="../static/media/img/rotateScreen.png" class="rotate"> -->
+		<img src="{% static 'media/img/rotateScreen.png' %}" class="rotate">
 		<img src="{% static 'media/img/LOGO_CC.png' %}" class="logocc">
 		<img src="{% static 'media/img/apogeeLogo.png' %}" class="logoApogee">
 		<!-- particles.js container --> <div id="particles-js"></div>
@@ -23,7 +24,7 @@
 		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<!-- stats.js lib --><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 		<div id="title">REALITY &nbsp;&nbsp;RUN</div>
-		<a id="butn" href="{% url 'social:begin' 'google-oauth2' %}"><button class="butn">LOGIN</button></a>
+		<a id="butn" href="{% url 'social:begin' 'google-oauth2' %}"><button class="butn"><img src="{% static 'media/img/login.png' %}" style="color: white;background:white;transform:translateY(5px);margin-right: 5px">LOGIN</button></a>
 
 		<script type="text/javascript" src="{% static 'main/js/newJs.js' %}"></script>
 	</body>
