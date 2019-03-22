@@ -27,7 +27,6 @@ canvas{ display: block; vertical-align: bottom; opacity: 1}
     color: white;
     font-size: 25px;
     cursor: pointer;
-    border-radius: 50%;
 }
 
 .logoApogee
@@ -70,5 +69,39 @@ canvas{ display: block; vertical-align: bottom; opacity: 1}
     }
     100% {
         opacity: 1;
+    }
+}
+
+.rotate
+{
+    display: none;
+}
+
+.rotate {
+    display: none;
+}
+
+@media all and (orientation:portrait) {
+    .rotate {
+        height: 100vh;
+        display: block;
+    }
+    canvas {
+        display: none;
+    }
+    #particles-js {
+        display: none;
+    }
+    #title {
+        display: none;
+    }
+    img, a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 800px) {
+    #title {
+        font-size: 100px;
     }
 }

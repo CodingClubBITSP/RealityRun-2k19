@@ -83,6 +83,9 @@ def answer(request, number):
             list1 = list(user.answers_given)
             list1[30 * (no - 1) + qsno] = '3'
             user.answers_given = ''.join(list1)
+            print(list1)
+            print(user.answers_given)
+            print(user.score)
             user.save()
             return HttpResponseRedirect('/accounts/profile/%s/' % number)
 
@@ -258,7 +261,7 @@ def leaderboard(request):
             username[i] = leaderboard[i].username
             score[i] = leaderboard[i].score
 
-        resp = {'username': username, 'rank': request.user.rank, 'score': score}
+        resp = {'username': username, 'rank': request.user.rank+1, 'score': score}
 
         return HttpResponse(json.dumps(resp), content_type='application/json')
     else:
