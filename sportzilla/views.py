@@ -261,7 +261,7 @@ def leaderboard(request):
             username[i] = leaderboard[i].username
             score[i] = leaderboard[i].score
 
-        resp = {'username': username, 'rank': request.user.rank+1, 'score': score}
+        resp = {'username': username, 'rank': request.user.rank, 'score': score}
 
         return HttpResponse(json.dumps(resp), content_type='application/json')
     else:

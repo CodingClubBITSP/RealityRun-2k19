@@ -1,4 +1,4 @@
-av=[1,1,1,1,1] ; // availabilty of questions for each stadium 1:available 0:not available
+av=[1,1,1,1,1] ; // availabilty of questions for each Arena 1:available 0:not available
 left=[0.125,0.31,0.52,0.72,0.92];  // left constraint for popup visibility
 right=[0.16,0.36,0.56,0.77,0.97];  // right constraint for popup visibility
 // device detection
@@ -123,9 +123,10 @@ function skipQues(x) {
 
 // --------------AJAX Code after this------------
 
-function getInitialQuestions(current) { //Invoked when first time any Stadium div is opened.
+function getInitialQuestions(current) { //Invoked when first time any Arena div is opened.
     $.ajax({
-        url : "http://127.0.0.1:8000/accounts/profile/"+current+"/",
+        // url : "http://127.0.0.1:8000/accounts/profile/"+current+"/",
+        url : "http://abhishekspeer.pythonanywhere.com/accounts/profile/"+current+"/",
         type: "GET",
         data: {'number':current},
         dataType: 'json',
@@ -158,7 +159,7 @@ function getInitialQuestions(current) { //Invoked when first time any Stadium di
     });
 }
 function getAnsResponse(answer, qno, current) { //Question no. Answer is passed. Check Answer and return.
-    var url1="http://127.0.0.1:8000/accounts/profile/"+current+"/answer/";
+    var url1="http://abhishekspeer.pythonanywhere.com/accounts/profile/"+current+"/answer/"; // change to 127.0.0.1:8000 when testing locally
     $.ajax({
         url : url1,
         type: "GET",
@@ -194,7 +195,7 @@ function getAnsResponse(answer, qno, current) { //Question no. Answer is passed.
 }
 function getSkipResponse(qno, current) { //Question Number attempted passed when skip is clicked. Deduct 25 points.
     $.ajax({
-        url : "http://127.0.0.1:8000/accounts/profile/"+current+"/skip/",
+        url : "http://abhishekspeer.pythonanywhere.com/accounts/profile/"+current+"/skip/", // change to 127.0.0.1:8000 when testing locally
         type: "GET",
         data: {'number':current},
         dataType: 'json',
@@ -227,9 +228,9 @@ function getSkipResponse(qno, current) { //Question Number attempted passed when
     });
 }
 function getCloseDivResponse (current) {
- //Stadium number is passed when Leave Stadium is clicked deduct 50 points
+ //Arena number is passed when Leave Arena is clicked deduct 50 points
     $.ajax({
-        url : "http://127.0.0.1:8000/accounts/profile/"+current+"/leave/",
+        url : "http://abhishekspeer.pythonanywhere.com/accounts/profile/"+current+"/leave/", // change to 127.0.0.1:8000 when testing locally
         type: "GET",
         //data: {'number':current},
         //dataType: 'json',
@@ -246,7 +247,7 @@ function getCloseDivResponse (current) {
 }
 function getLeaderboard() {
     $.ajax({
-        url : "http://127.0.0.1:8000/accounts/profile/leaderboard/",
+        url : "http://abhishekspeer.pythonanywhere.com/accounts/profile/leaderboard/",// change to 127.0.0.1:8000 when testing locally
         type : "GET",
         beforeSend : function() {
             document.getElementById('position').innerHTML = "Please Wait...";
