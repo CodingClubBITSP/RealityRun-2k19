@@ -76,6 +76,11 @@ canvas{ display: block; vertical-align: bottom; opacity: 1}
 {
     display: none;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
 
 .rotate {
     display: none;
@@ -105,3 +110,7 @@ canvas{ display: block; vertical-align: bottom; opacity: 1}
         font-size: 100px;
     }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
+>>>>>>> master

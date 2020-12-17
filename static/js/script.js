@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+av=[1,1,1,1,1] ; // availabilty of questions for each stadium 1:available 0:not available
+=======
 av=[1,1,1,1,1] ; // availabilty of questions for each Arena 1:available 0:not available
+>>>>>>> master
 left=[0.125,0.50,0.85];  // left constraint for popup visibility
 right=[0.16,0.57,0.92];  // right constraint for popup visibility
 // device detection
